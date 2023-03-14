@@ -15,7 +15,7 @@ namespace ElementsClient
         private static readonly string certificateThumbprint = "{thumbprint}";
         private static readonly string scopes = "partner.license.read.all";
 
-        private static readonly string endpoint = "https://graph-public.sharepointguild.com/partner/api/V1.1/Services";
+        private static readonly string endpoint = "https://graph.avepointonlineservices.com/partner/api/V1.1/Services";
 
         static async Task Main(string[] args)
         {
