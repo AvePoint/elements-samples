@@ -29,7 +29,8 @@ Name | Type | Description  | Notes
  **JsonFormat** | **Boolean**| Response in JSON format. | [optional]
 
 Supported Filter: $filter, $select, $top, $skip and other filtering parameters supported by odata
-You can add a hashtable value after -Filter, such as @{'$select'='OwnerEmail'}
+You can add a hashtable value after -Filter, such as @{'$select'='OwnerEmail'}<br>
+Unsupported filter: ID
 
 ### Example
 ```powershell
@@ -138,7 +139,8 @@ Name | Type | Description  | Notes
  **JsonFormat** | **Boolean**| Response in JSON format. | [optional]
 
 Supported Filter: $filter, $select, $top, $skip and other filtering parameters supported by odata
-You can add a hashtable value after -Filter, such as @{'$top'=3}
+You can add a hashtable value after -Filter, such as @{'$top'=3}<br>
+Unsupported filter: ID
 
 ### Example
 ```powershell
