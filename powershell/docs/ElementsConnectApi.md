@@ -25,7 +25,7 @@ Name | Type | Description  | Notes
 ### Example
 ```powershell
 
-Connect-Elements -Url 'https://graph-public.sharepointguild.com/partner' -ClientId '06367378-7a45-4edc-b3a0-0fa51a74e865' -Certificate (Get-ChildItem -Path 'Cert:\LocalMachine\My\433DFBF106CBD00BA7676FA80CE5FAAF2F49B675' -Recurse)[0]
+Connect-Elements -Url 'https://graph-public.sharepointguild.com/partner' -ClientId '06367378-7a45-4edc-b3a0-0fa51a74e865' -Cert (Get-ChildItem -Path 'Cert:\LocalMachine\My\433DFBF106CBD00BA7676FA80CE5FAAF2F49B675' -Recurse)[0]
 ```
 
 [[Back to top]](#) [[Back to API list]](ElementsApi.md#documentation-for-cmdlets) [[Back to README]](../README.md)
