@@ -9,6 +9,8 @@ Method | Description
 [**Get-ElementsCustomerProtected**](ElementsCustomersApi.md#get-elementscustomerprotected) | Use the following PowerShell command to get the protected data information of a specific customer that you manage.
 [**Get-ElementsCustomerServices**](ElementsCustomersApi.md#get-elementscustomerservices) | Use the following PowerShell command to get the subscription details of different services for the customers that you manage.
 [**Get-ElementsCustomerScanProfile**](ElementsCustomersApi.md#get-elementscustomerscanprofile) | Use the following PowerShell command to get the profiles for the customer that you manage.
+[**Get-ElementsCustomerScanProfileDailyNew**](ElementsCustomersApi.md#get-elementscustomerscanprofiledailynew) | Use the following PowerShell command to get the changes summary of the Scan Profile.
+[**Get-ElementsCustomerScanProfileDailyNewDetail**](ElementsCustomersApi.md#get-elementscustomerscanprofiledailynewdetail) | Use the following PowerShell command to get the changes objects of the Scan Profile.
 
 <a name="get-elementscustomer"></a>
 # **Get-ElementsCustomer**
@@ -186,6 +188,76 @@ Unsupported filter: Id,ProfileId
 3. Get-ElementsCustomerScanProfile -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -OutFile 'C:\exportdir\file.csv'
 4. Get-ElementsCustomerScanProfile -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -Filter @{'$top'=3}
 5. Get-ElementsCustomerScanProfile -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -JsonFormat $true
+```
+
+[[Back to top]](#) [[Back to API list]](ElementsApi.md#documentation-for-cmdlets) [[Back to README]](../README.md)
+
+<a name="get-elementscustomerscanprofiledailynew"></a>
+# **Get-ElementsCustomerScanProfileDailyNew**
+> Get-ElementsCustomerScanProfileDailyNew<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ProfileId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OutFile] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <Hashtable><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-JsonFormat] <Boolean><br>
+
+Use the following PowerShell command to get the changes summary of the Scan Profile.
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**| The tenant owner ID of the customer. |
+ **ProfileId**| **String**| The ID of the profile. |
+ **OutFile** | **String**| The location where the exported file will be stored.| [optional]
+ **Filter** | **Hashtable**| Configure the odata parameters to filter customer.| [optional]
+ **JsonFormat** | **Boolean**| Response in JSON format. | [optional]
+
+Supported Filter: $filter, $select, $skip and other filtering parameters supported by odata
+You can add a hashtable value after -Filter, such as @{'$select'='newRegistedContent'}<br>
+Unsupported filter: Id,ProfileId
+
+### Example
+```powershell
+1. Get-ElementsCustomerScanProfileDailyNew -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933'
+2. Get-ElementsCustomerScanProfileDailyNew -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933' -OutFile 'C:\exportdir\file.csv'
+3. Get-ElementsCustomerScanProfileDailyNew -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933' -Filter @{'$select'='newRegistedContentCount'}
+4. Get-ElementsCustomerScanProfileDailyNew -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933' -JsonFormat $true
+```
+
+[[Back to top]](#) [[Back to API list]](ElementsApi.md#documentation-for-cmdlets) [[Back to README]](../README.md)
+
+<a name="get-elementscustomerscanprofiledailynewdetail"></a>
+# **Get-ElementsCustomerScanProfileDailyNewDetail**
+> Get-ElementsCustomerScanProfileDailyNewDetail<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ProfileId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OutFile] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <Hashtable><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-JsonFormat] <Boolean><br>
+
+Use the following PowerShell command to get the changes objects of the Scan Profile.
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**| The tenant owner ID of the customer. |
+ **ProfileId**| **String**| The ID of the profile. |
+ **OutFile** | **String**| The location where the exported file will be stored.| [optional]
+ **Filter** | **Hashtable**| Configure the odata parameters to filter customer.| [optional]
+ **JsonFormat** | **Boolean**| Response in JSON format. | [optional]
+
+Supported Filter: $filter, $select, $skip and other filtering parameters supported by odata
+You can add a hashtable value after -Filter, such as @{'$select'='newRegistedContent'}<br>
+Unsupported filter: Id,ProfileId
+
+### Example
+```powershell
+1. Get-ElementsCustomerScanProfileDailyNewDetail -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933'
+2. Get-ElementsCustomerScanProfileDailyNewDetail -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933' -OutFile 'C:\exportdir\file.csv'
+3. Get-ElementsCustomerScanProfileDailyNewDetail -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933' -Filter @{'$select'='newRegistedContent'}
+4. Get-ElementsCustomerScanProfileDailyNewDetail -Id '41e33073-5bf1-4e7f-9945-ce6fcc87cebb' -ProfileId '6639364e-6bc2-4d2c-9222-4f256a10a933' -JsonFormat $true
 ```
 
 [[Back to top]](#) [[Back to API list]](ElementsApi.md#documentation-for-cmdlets) [[Back to README]](../README.md)
