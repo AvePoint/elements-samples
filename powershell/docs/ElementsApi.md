@@ -2,7 +2,7 @@
 
 Method | Description
 ------------- | -------------
-[**Connect-Elements**](ElementsConnectApi.md#connect-elements) | Connect to Elements Public API with Client credentials.
+[**Connect-Elements**](ElementsConnectApi.md#connect-elements) | Connect to Elements Public API with Client credentials or Client Secret.
 [**Disconnect-Elements**](ElementsConnectApi.md#disconnect-elements) | Disconnect from Elements Public API.
 [**Get-ElementsCustomer**](ElementsCustomersApi.md#get-elementscustomer) | Use the following PowerShell command to get the general information of the customers that you manage.
 [**Get-ElementsCustomerJob**](ElementsCustomersApi.md#get-elementscustomerjob) | Use the following PowerShell command to get the job information of a specific customer that you manage.
