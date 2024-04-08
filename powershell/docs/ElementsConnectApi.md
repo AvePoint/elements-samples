@@ -25,7 +25,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```powershell
-Connect-Elements -Url 'https://graph-public.sharepointguild.com/partner' -ClientId '06367378-7a45-4edc-b3a0-0fa51a74e865' -Cert $certificate
+Connect-Elements -Url 'Elements URL' -ClientId 'your clientId' -Cert $certificate
 ```
 You can construct the $certificate parameter by the following two ways:
 ```powershell
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```powershell
-Connect-Elements -Url 'https://graph-public.sharepointguild.com/partner' -ClientId '06367378-7a45-4edc-b3a0-0fa51a74e865' -ClientSecret 'your secret'
+Connect-Elements -Url 'Elements URL' -ClientId 'your clientId' -ClientSecret 'your secret'
 ```
 
 [[Back to top]](#) [[Back to API list]](ElementsApi.md#documentation-for-cmdlets) [[Back to README]](../README.md)
