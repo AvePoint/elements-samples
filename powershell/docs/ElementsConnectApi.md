@@ -33,7 +33,7 @@ You can construct the $certificate parameter by the following two ways:
 $certificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "path_to_pfx_file", "password"
 
 # Get from certificate store of local machine by certificate thumbprint, you need install the certificate to local machine in advance and replace the certificate thumbprint to yours
-$certificate = (Get-ChildItem -Path 'Cert:\LocalMachine\My\304CAFB0719971D7F180DE983F649DFAC85D47D3' -Recurse)[0]
+$certificate = (Get-ChildItem -Path 'Cert:\LocalMachine\My\your thumbprint' -Recurse)[0]
 ```
 
 The second way
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Example
 ```powershell
-Connect-Elements -Url 'https://graph-public.sharepointguild.com/partner' -ClientId '06367378-7a45-4edc-b3a0-0fa51a74e865' -ClientSecret 'RXp2M6X1GfWxRQO/XhsWyz6aUHY1slDc8T/FpDbvLwk='
+Connect-Elements -Url 'https://graph-public.sharepointguild.com/partner' -ClientId '06367378-7a45-4edc-b3a0-0fa51a74e865' -ClientSecret 'your secret'
 ```
 
 [[Back to top]](#) [[Back to API list]](ElementsApi.md#documentation-for-cmdlets) [[Back to README]](../README.md)

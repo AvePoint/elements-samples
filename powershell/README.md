@@ -38,7 +38,7 @@ You can construct the $certificate parameter by the following two ways:
 $certificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "path_to_pfx_file", "password"
 
 # Get from certificate store of local machine by certificate thumbprint, you need install the certificate to local machine in advance and replace the certificate thumbprint to yours
-$certificate = (Get-ChildItem -Path 'Cert:\LocalMachine\My\304CAFB0719971D7F180DE983F649DFAC85D47D3' -Recurse)[0]
+$certificate = (Get-ChildItem -Path 'Cert:\LocalMachine\My\your thumbprint' -Recurse)[0]
 ```
 Or use the Client Secret to connect
 ```powershell
