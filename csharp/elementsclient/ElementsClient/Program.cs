@@ -97,7 +97,9 @@ namespace ElementsClient
             string result = string.Empty;
             var handler = new HttpClientHandler
             {
-                ServerCertificateCustomValidationCallback = (msg, cert, chain, err) => true
+                ServerCertificateCustomValidationCallback = (msg, cert, chain, err) => {
+                    return err == System.Net.Security.SslPolicyErrors.None;
+                }
             };
             using (var httpClient = new HttpClient())
             {
